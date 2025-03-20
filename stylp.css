@@ -1,0 +1,292 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Profil ustawiony po lewej */
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.profile-container {
+    position: fixed; /* Zablokowanie po lewej stronie */
+    top: 0;
+    left: 0; /* Ustawienie na lewym boku */
+    width: 300px; /* Stała szerokość profilu */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); /* Cień dla lepszego wyglądu */
+    padding: 20px;
+    height: 100%; /* Pełna wysokość ekranu */
+    overflow-y: auto; /* Obsługa przewijania dla nadmiaru treści */
+    z-index: 100; /* Priorytet elementu */
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+    margin-bottom: 15px;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #4CAF50;
+}
+
+.profile-info p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.user-posts {
+    margin-left: 320px; /* Przesunięcie w prawo, aby uniknąć kolizji z profilem */
+    padding: 20px;
+    width: calc(100% - 320px); /* Dopasowanie szerokości sekcji z postami */
+}
+
+.user-posts h2 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.post-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.post-card p {
+    margin: 0 0 10px;
+    color: #555;
+}
+
+.post-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.bio-section {
+    margin-top: 20px;
+}
+
+.bio-section h2 {
+    font-size: 20px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.save-bio-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-bio-button:hover {
+    background-color: #45a049;
+}
+
+.return-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.return-button .btn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Niebieski kolor przycisku */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.return-button .btn:hover {
+    background-color: #0056b3; /* Ciemniejszy odcień niebieskiego */
+    transform: scale(1.05); /* Powiększenie przy najechaniu */
+}
+
+.user-likes {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.user-likes h2 {
+    font-size: 20px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.user-likes p {
+    font-size: 16px;
+    color: #555;
+}
+/* Tryb nocny dla profilu */
+body.dark-mode .profile-container {
+    background-color: #1e1e1e; /* Ciemne tło */
+    color: #ffffff; /* Jasny tekst */
+    border: 1px solid #333; /* Obwódka */
+}
+
+body.dark-mode .profile-picture {
+    border: 3px solid #555; /* Obramowanie zdjęcia w trybie nocnym */
+}
+
+body.dark-mode .bio-section {
+    background-color: #292929;
+    border: 1px solid #444;
+    color: #ffffff;
+}
+
+body.dark-mode .user-likes {
+    background-color: #292929;
+    border: 1px solid #444;
+    color: #ffffff;
+}
+/* Tryb nocny dla całego ciała strony */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Tryb nocny dla kontenera profilu */
+body.dark-mode .profile-container {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #ffffff;
+}
+
+/* Tryb nocny dla sekcji postów */
+body.dark-mode .user-posts {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Tryb nocny dla kart postów */
+body.dark-mode .post-card {
+    background-color: #292929;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+body.dark-mode .post-card {
+    background-color: #292929; /* Ciemne tło */
+    color: #ffffff; /* Jasny tekst */
+    border: 1px solid #444; /* Obramowanie */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtelny cień */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .post-card h3 {
+    color: #ffffff; /* Biały tekst dla tytułu */
+}
+
+body.dark-mode .post-card p {
+    color: #cccccc; /* Jaśniejszy tekst dla treści */
+}
+
+body.dark-mode .post-card img {
+    border: 1px solid #555; /* Ciemniejsze obramowanie dla obrazów */
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.theme-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.theme-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+/* Tryb nocny - przycisk powrotu */
+body.dark-mode .theme-button .btn {
+    background-color: #444444; /* Ciemnoszary kolor przycisku */
+    color: #ffffff; /* Jasny tekst */
+    border: 1px solid #666666; /* Obramowanie przycisku */
+}
+
+body.dark-mode .theme-button .btn:hover {
+    background-color: #555555; /* Jaśniejszy szary na hover */
+    transform: scale(1.05); /* Powiększenie przy najechaniu */
+}
+
+/* Styl dla przycisku Night Mode w jasnym trybie */
+.theme-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Niebieski kolor przycisku */
+    color: white; /* Biały tekst */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-button:hover {
+    background-color: #0056b3; /* Ciemniejszy odcień niebieskiego */
+    transform: scale(1.05); /* Powiększenie przy najechaniu */
+}
+
+/* Styl dla przycisku Night Mode w trybie nocnym */
+body.dark-mode .theme-button {
+    background-color: #444444; /* Ciemnoszary przycisk */
+    color: #ffffff; /* Jasny tekst */
+    border: 1px solid #666666; /* Obramowanie przycisku */
+}
+
+body.dark-mode .theme-button:hover {
+    background-color: #555555; /* Jaśniejszy szary na hover */
+    transform: scale(1.05); /* Powiększenie przy najechaniu */
+}
