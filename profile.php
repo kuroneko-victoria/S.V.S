@@ -452,4 +452,4 @@ $conn->close();
             localStorage.setItem('theme', 'dark'); // Zapisz tryb nocny
         }
     });
-</script><?php
+</script>
