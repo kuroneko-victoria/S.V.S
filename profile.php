@@ -38,31 +38,31 @@ if ($result_likes && $result_likes->num_rows > 0) {
 
 // Ustalanie odpowiedniej aury
 if ($total_likes < 10) {
-    $auraImage = 'Zdjecia/aura 0.jpg';
+    $auraImage = 'Zdjęcia/aura 0.jpg';
     $borderColor = 'red';
     $auraText = 'Low Aura';
 } elseif ($total_likes >= 10 && $total_likes < 30) {
-    $auraImage = 'Zdjecia/aura 1.jpg';
+    $auraImage = 'Zdjęcia/aura 1.jpg';
     $borderColor = 'orange';
     $auraText = 'Mid Aura';
 } elseif ($total_likes >= 30 && $total_likes < 70) {
-    $auraImage = 'Zdjecia/aura 3.jpg';
+    $auraImage = 'Zdjęcia/aura 3.jpg';
     $borderColor = 'yellow';
     $auraText = 'Premium Mid Aura';
 } elseif ($total_likes >= 70 && $total_likes < 100) {
-    $auraImage = 'Zdjecia/aura 4.jpg';
+    $auraImage = 'Zdjęcia/aura 4.jpg';
     $borderColor = 'green';
     $auraText = 'Aura 100';
 } elseif ($total_likes >= 100 && $total_likes < 300) {
-    $auraImage = 'Zdjecia/aura 5.jpg';
+    $auraImage = 'Zdjęcia/aura 5.jpg';
     $borderColor = 'blue';
     $auraText = 'Sigmaaaa';
 } elseif ($total_likes >= 300 && $total_likes < 1000) {
-    $auraImage = 'Zdjecia/aura 6.jpg';
+    $auraImage = 'Zdjęcia/aura 6.jpg';
     $borderColor = 'pink';
     $auraText = 'Legendary Auuraaaa 10000 Slay';
 } else {
-    $auraImage = 'Zdjecia/defaultaura.jpg';
+    $auraImage = 'Zdjęcia/defaultaura.jpg';
     $borderColor = 'gray';
     $auraText = 'default';
 }
